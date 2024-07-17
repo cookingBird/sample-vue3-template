@@ -1,6 +1,6 @@
 <template>
   <div class="about text-2xl font-extrabold">
-    <h1>This is an about page</h1>
+    <h1 class="mx-auto">This is an about page</h1>
   </div>
 </template>
 

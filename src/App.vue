@@ -1,29 +1,21 @@
-<script setup>
-  import { RouterLink, RouterView } from 'vue-router';
-  import HelloWorld from './components/HelloWorld.vue';
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink class="text-gray-300" to="/">Home</RouterLink>
-        <RouterLink class="text-gray-300" to="/about">About</RouterLink>
-      </nav>
-    </div>
+  <header class="flex justify-center">
+    <nav>
+      <template v-for="route in routes">
+        <RouterLink class="text-gray-300" :to="route.path">{{ route.name }}</RouterLink>
+      </template>
+    </nav>
   </header>
-
   <RouterView />
 </template>
+
+<script setup>
+  import { routes } from '@/router';
+</script>
 
 <style scoped>
   header {
     line-height: 1.5;
-    max-height: 100vh;
   }
 
   .logo {
@@ -32,7 +24,7 @@
   }
 
   nav {
-    width: 100%;
+    width: auto;
     font-size: 12px;
     text-align: center;
     margin-top: 2rem;
