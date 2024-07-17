@@ -1,6 +1,6 @@
 # vue-project
 
-This template should help get you started developing with Vue 3 in Vite. Comdine with tailwindcss router autoImport plugin;
+The miniest vue3 template, the most convenient;
 
 ## Recommended IDE Setup
 
