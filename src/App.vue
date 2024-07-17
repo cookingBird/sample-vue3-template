@@ -1,12 +1,14 @@
 <template>
-  <header class="flex justify-center">
+  <header class="flex justify-center flex-grow-0">
     <nav>
       <template v-for="route in routes">
         <RouterLink class="text-gray-300" :to="route.path">{{ route.name }}</RouterLink>
       </template>
     </nav>
   </header>
-  <RouterView />
+  <main class="flex flex-grow overflow-hidden">
+    <RouterView />
+  </main>
 </template>
 
 <script setup>
