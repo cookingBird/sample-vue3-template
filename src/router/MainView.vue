@@ -2,7 +2,11 @@
   <header class="flex justify-center flex-grow-0">
     <nav>
       <template v-for="route in routes">
-        <RouterLink class="text-gray-300" :to="'/?to=' + route.path">
+        <RouterLink
+          class="text-gray-300"
+          :data-active="query.to === route.path"
+          :to="'/?to=' + route.path"
+        >
           {{ route.name }}
         </RouterLink>
       </template>
@@ -36,11 +40,11 @@
     margin-top: 2rem;
   }
 
-  nav a.router-link-exact-active {
+  nav a[data-active='true'] {
     color: var(--color-text);
   }
 
-  nav a.router-link-exact-active:hover {
+  nav a[data-active='true']:hover {
     background-color: transparent;
   }
 
