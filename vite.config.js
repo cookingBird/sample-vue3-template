@@ -7,9 +7,9 @@ import Components from 'unplugin-vue-components/vite';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode, command }) => {
-  const { BASE_URL } = loadEnv(mode, process.cwd());
+  const { VITE_APP_BASE_URL } = loadEnv(mode, process.cwd());
   return {
-    base: BASE_URL,
+    base: VITE_APP_BASE_URL,
     plugins: [
       vue(),
       AutoImport({

@@ -1,6 +1,8 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import MainView from './MainView.vue';
+
+export const isHistory = import.meta.env.VITE_APP_ROUTER_HISTORY === 'true';
 
 const routes = [
   {
@@ -19,7 +21,9 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: isHistory
+    ? createWebHistory(import.meta.env.VITE_APP_BASE_URL)
+    : createWebHashHistory(import.meta.env.VITE_APP_BASE_URL),
   routes: [
     {
       path: '/',
@@ -30,6 +34,7 @@ const router = createRouter({
     ...routes,
   ],
 });
+router.$isHistory = isHistory;
 
 export { routes };
 export default router;
