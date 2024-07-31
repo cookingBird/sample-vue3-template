@@ -11,7 +11,8 @@
   "dependencies": {
     "vue": "^3.4.29",
     "vue-router": "^4.3.3",
-    "axios": "1.7.2"
+    "axios": "1.7.2",
+    "ant-design-vue-pro3": "file:./antDesignPro/packages/ant-design-vue-pro3"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",

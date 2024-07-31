@@ -1,0 +1,4 @@
+[submodule "antDesignVuePro3"]
+	path = antDesignPro
+	url = https://github.com/cookingBird/ant-design-vue-pro3.git
+	branch = main
