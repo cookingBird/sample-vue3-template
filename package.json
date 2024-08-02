@@ -13,7 +13,9 @@
     "vue-router": "^4.3.3",
     "axios": "1.7.2",
     "ant-design-vue-pro3": "file:./antDesignPro/packages/ant-design-vue-pro3",
-    "ant-design-vue": "^3"
+    "ant-design-vue": "^3",
+    "@vueuse/core": "10.11.0",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",
@@ -22,6 +24,10 @@
     "tailwindcss": "^3.4.6",
     "vite": "^5.3.1",
     "unplugin-auto-import": "0.17.6",
-    "unplugin-vue-components": "0.27.2"
+    "unplugin-vue-components": "0.27.2",
+    "less": "^4.2.0",
+    "sass": "^1.77.8",
+    "@iconify/vue": "^4.1.2",
+    "@types/lodash": "4.17.7"
   }
 }
